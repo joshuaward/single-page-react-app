@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// Default button configs
+// ** .btn
+// ** .btn.btn--ghost
+// ** .btn.btn--secondary
+// ** .btn.btn--secondary.btn--ghost
+// -----------------------------------------------------------------------------
+
+.btn {
+  @extend %btn;
+  &--ghost {
+    @extend %btn--ghost;
+  }
+
+  &--secondary {
+    @extend %btn--secondary;
+  }
+}

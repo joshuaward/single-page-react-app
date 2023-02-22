@@ -1,0 +1,17 @@
+.nav-skip {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 0.75rem;
+  background: $white;
+  box-shadow: 0.125rem 0.125rem 0.25rem rgba($black, 0.2),
+    0.125rem 0.125rem 0.75rem rgba($black, 0.075);
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: 0.25s ease;
+  z-index: 10000;
+  &:focus {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
