@@ -1,0 +1,87 @@
+.pagination {
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+	&__inner {
+		@include container($max: $maxWidthSm);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		margin-top: 1rem;
+	}
+	&__results {
+		font-size: 0.75rem;
+		font-weight: 500;
+	}
+	&__prev,
+	&__next {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin-left: 0.25rem;
+		margin-right: 0.25rem;
+		background: darken($slategray, 15%);
+		border: none;
+		border-radius: 50%;
+		color: $white;
+		cursor: pointer;
+		&:disabled {
+			opacity: 0.4;
+			cursor: not-allowed;
+		}
+	}
+	&__prev {
+		order: -1;
+		@include mq(md) {
+			order: unset;
+		}
+	}
+	&__next {
+		order: -1;
+		@include mq(md) {
+			order: unset;
+		}
+	}
+	&__items {
+		flex: 1 0 100%;
+		display: none;
+		@include mq(md) {
+			flex: 0 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	&__item {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin-left: 0.125rem;
+		margin-right: 0.125rem;
+		margin-left: 0.125rem;
+		margin-right: 0.125rem;
+		background: $slategray;
+		border-radius: 50%;
+		color: $white;
+		font-size: 0.875rem;
+		cursor: pointer;
+		@include mq(md) {
+			margin-left: 0.25rem;
+			margin-right: 0.25rem;
+		}
+		&:hover {
+			background: darken($slategray, 10%);
+		}
+		&.active {
+			background: $sunglow;
+			color: $gunmetal;
+			font-weight: 500;
+			cursor: not-allowed;
+		}
+	}
+}
