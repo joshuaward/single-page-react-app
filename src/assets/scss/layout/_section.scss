@@ -18,16 +18,23 @@ section {
 		@include background-fill($gunmetal);
 	}
 	&.section--fill-slateGray {
-		@include background-fill($slateGray);
+		@include background-fill($slategray);
 	}
 	&.section--fill-salmon {
 		@include background-fill($salmon);
 	}
 	&.section--fill-sunGlow {
-		@include background-fill($sunGlow);
+		@include background-fill($sunglow);
 	}
 	&.section--fill-whitesmoke {
 		@include background-fill($whitesmoke);
+	}
+
+	&.section--full {
+		height: 100%;
+		.section__inner {
+			height: 100%;
+		}
 	}
 
   .section__inner {

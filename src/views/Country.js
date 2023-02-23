@@ -14,8 +14,6 @@ const Country = () => {
 			})
 	}, [params]);
 
-	console.log('country', country)
-
 	return(
 		<section className="section">
 			<div className="section__inner">
@@ -31,7 +29,7 @@ const Country = () => {
 							<div key={index} className="country country--detail">
 								
 								<div className="country__image">
-									<img src={item.flags.svg} alt={item.name.common} />
+									<img src={item.flags.png} alt={item.name.common} />
 								</div>
 								<div className="country__meta">
 									<h4 className="country__name">
@@ -60,16 +58,6 @@ const Country = () => {
 									<div className="country__meta-item">
 										<span className="country__meta-label">Coordinates: </span>
 										<span className="country__meta-data">{item.latlng}</span>
-									</div>
-									<div className="country__borders">
-										{
-											item.borders.length ? 
-												item.borders.map((item, index) => (
-													<div key={index}>{item}</div>
-												))
-												:
-												null
-										}
 									</div>
 								</div>
 							</div>

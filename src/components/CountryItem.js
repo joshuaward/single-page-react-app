@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const CountryItem = ({country}) => {
+const CountryItem = ({country, index}) => {
 
 	return(
 		<div className="grid__item">
 			<Link to={`/${country.name.common}`} className="country">
 				<div className="country__image">
-					<img src={country.flags.svg} alt={country.name.common} />
+					<img src={country.flags.png} alt={country.name.common} />
 				</div>
 				<div className="country__meta">
 					<h4 className="country__name">{country.name.common}</h4>

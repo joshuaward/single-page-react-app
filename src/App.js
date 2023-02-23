@@ -15,6 +15,7 @@ const App = () => {
 	const [loaded, setLoaded] = useState(false);
 	const [error, setError] = useState(false);
 	const [countries, setCountries] = useState([]);
+	const [menu, setMenu] = useState(false);
 
 	useEffect(() => {
 		fetch('https://restcountries.com/v3.1/all?results=10')
@@ -31,10 +32,10 @@ const App = () => {
 
   return (
     <BrowserRouter>
-			<Header />
+			<Header menu={menu} setMenu={setMenu} />
 			<main>
 				<Routes>
-					<Route path="/" element={<Home countries={countries} />} />
+					<Route path="/" element={<Home countries={countries} loaded={loaded} error={error} />} />
 					<Route path="/:name" element={<Country />} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>

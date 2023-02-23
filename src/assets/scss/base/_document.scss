@@ -14,6 +14,7 @@
 html {
   font-size: $rootEM;
   box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *,
@@ -30,6 +31,7 @@ body {
 body {
   margin: 0;
   padding: 0;
+	background: $whitesmoke;
   font-size: $fontSizeBase;
   line-height: $lineHeightBase;
   font-family: $fontFamilyBase;
@@ -50,6 +52,16 @@ body {
   //     #{$focusProperty}: $focusValue;
   //   }
   // }
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	main {
+		flex: 1 0 auto;
+	}
 }
 
 .hide-visually {
