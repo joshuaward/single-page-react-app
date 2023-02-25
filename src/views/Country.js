@@ -6,8 +6,6 @@ const Country = () => {
 	const params = useParams();
 	const [country, setCountry] = useState([]);
 
-	console.log(country)
-
 	useEffect(() => {
 		fetch(`https://restcountries.com/v3.1/alpha/${params.ccn3}`)
 			.then(res => res.json())
