@@ -1,6 +1,6 @@
 .pagination {
 	margin-top: 3rem;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 	&__inner {
 		@include container($max: $maxWidthSm);
 		display: flex;
@@ -22,7 +22,7 @@
 		height: 2.5rem;
 		margin-left: 0.25rem;
 		margin-right: 0.25rem;
-		background: darken($slategray, 15%);
+		background: $slategray;
 		border: none;
 		border-radius: 50%;
 		color: $white;
@@ -65,7 +65,7 @@
 		margin-right: 0.125rem;
 		margin-left: 0.125rem;
 		margin-right: 0.125rem;
-		background: $slategray;
+		background: $gunmetal;
 		border-radius: 50%;
 		color: $white;
 		font-size: 0.875rem;

@@ -5,7 +5,7 @@ const CountryItem = ({country, index}) => {
 
 	return(
 		<div className="grid__item">
-			<Link to={`/${country.name.common}`} className="country">
+			<Link to={`/country/${country.ccn3}`} className="country">
 				<div className="country__image">
 					<img src={country.flags.png} alt={country.name.common} />
 				</div>

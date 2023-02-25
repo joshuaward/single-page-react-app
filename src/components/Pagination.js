@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Pagination = ({countries, pageNumber, setPage}) => {
 
 	const setCurrentPage = (page) => {
@@ -31,8 +29,13 @@ const Pagination = ({countries, pageNumber, setPage}) => {
 					<div className="pagination__items">
 					{pages.length ? 
 						pages.map((page, index) => (
-							<div className={`pagination__item ${pageNumber === index ? 'active' : ''}`} onClick={() => setCurrentPage(page)} key={page}>{page}</div>
-							))
+							<div 
+								className={`pagination__item ${pageNumber === index ? 'active' : ''}`}
+								onClick={() => setCurrentPage(page)}
+								key={page}>
+									{page}
+							</div>
+						))
 						:
 						null
 					}

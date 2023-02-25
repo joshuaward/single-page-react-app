@@ -6,8 +6,10 @@ const Country = () => {
 	const params = useParams();
 	const [country, setCountry] = useState([]);
 
+	console.log(country)
+
 	useEffect(() => {
-		fetch(`https://restcountries.com/v3.1/name/${params.name}`)
+		fetch(`https://restcountries.com/v3.1/alpha/${params.ccn3}`)
 			.then(res => res.json())
 			.then(data => {
 				setCountry(data)
@@ -57,7 +59,9 @@ const Country = () => {
 									</div>
 									<div className="country__meta-item">
 										<span className="country__meta-label">Coordinates: </span>
-										<span className="country__meta-data">{item.latlng}</span>
+										<span className="country__meta-data">
+											<span>{item.latlng[0].toFixed(3)},  {item.latlng[1].toFixed(3)}</span>
+										</span>
 									</div>
 								</div>
 							</div>

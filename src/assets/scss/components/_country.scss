@@ -17,7 +17,7 @@
 		color: $darkGray;
 		.country__image {
 			img {
-				transform: scale(1.05);
+				transform: scale(1.09);
 			}
 		}
 	}
@@ -107,10 +107,10 @@
 	}
 	&__meta {
 		padding: 1rem;
-		background: $whitesmoke;
 		.country--detail & {
 			padding-left: 0;
 			padding-right: 0;
+			background: $whitesmoke;
 			@include mq(md) {
 				flex: 0 1 50%;
 				padding: 1rem 1.875rem;

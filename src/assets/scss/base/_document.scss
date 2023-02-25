@@ -39,19 +39,6 @@ body {
   color: $fontColorBase;
   max-width: 100%;
   overflow-x: hidden;
-
-  // &:where(.using-mouse) {
-  //   *:focus {
-  //     outline: none;
-  //   }
-  // }
-
-  // &:where(:not(.using-mouse)) {
-  //   *:focus {
-  //     outline: none;
-  //     #{$focusProperty}: $focusValue;
-  //   }
-  // }
 }
 
 #root {
@@ -61,6 +48,11 @@ body {
 	height: 100vh;
 	main {
 		flex: 1 0 auto;
+		margin-top: 6rem;
+		@include mq(md) {
+			margin-top: 7.5rem;
+
+		}
 	}
 }
 
