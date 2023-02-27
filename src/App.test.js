@@ -1,9 +1,8 @@
-import { render as rtlRender, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
-import Header from './components/Header';
 
-const render = (ui, {route = '/'} = {}) => {
-  window.history.pushState({}, 'Test page', route)
-
-  return rtlRender(ui, {wrapper: Router})
-}
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
