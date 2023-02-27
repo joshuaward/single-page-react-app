@@ -1,7 +1,9 @@
 .header {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	display: flex;
-	margin-bottom: 2rem;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	background: $gunmetal;
@@ -39,7 +41,7 @@
 			}
 		}
 		i {
-			margin-right: 0.25rem;
+			margin-right: 0.5rem;
 			font-size: 1.25rem;
 		}
 	}
@@ -59,9 +61,6 @@
 		&.is-open {
 			span {
 				background-color: $white;
-				&:before {
-					background-color: $white;
-				}
 				&:first-child {
 					transform: translateY(0.125rem) rotate(-45deg);
 				}

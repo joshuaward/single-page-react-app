@@ -13,30 +13,32 @@ const Home = ({loaded, error, countries}) => {
 
 	return(
 		<section className="section section--full">
-			{loaded ? (
-				<React.Fragment>
-					{!error ? (
-							<React.Fragment>
-								<CountryList countries={countries} page={page} />
-								<Pagination setPage={setPage} pageNumber={page} countries={countries} />
-							</React.Fragment>
-						)
-						:
-						(
-							<div className="error">
-								<h2>Shewt!</h2>
-								<p>Not sure what happened there. Refresh and try again.</p>
-							</div>
-					)}
-				</React.Fragment>
-			)
-			:
-			(
-				<React.Fragment>
-					<Loader />
-				</React.Fragment>
-			)
-			}
+			<div className="section__inner">
+				{loaded ? (
+					<React.Fragment>
+						{!error ? (
+								<React.Fragment>
+									<CountryList countries={countries} page={page} />
+									<Pagination setPage={setPage} pageNumber={page} countries={countries} />
+								</React.Fragment>
+							)
+							:
+							(
+								<div className="error">
+									<h2>Shewt!</h2>
+									<p>Not sure what happened there. Refresh and try again.</p>
+								</div>
+						)}
+					</React.Fragment>
+				)
+				:
+				(
+					<React.Fragment>
+						<Loader />
+					</React.Fragment>
+				)
+				}
+			</div>
 		</section>
 	)
 }

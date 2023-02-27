@@ -21,12 +21,14 @@ const App = () => {
 		fetch('https://restcountries.com/v3.1/all?results=10')
 			.then(res => res.json())
 			.then(data => {
-				setLoaded(true);
+				setTimeout(() => {
+					setLoaded(true);
+				}, 5000);
 				setCountries(data);
 			})
 			.catch(err => {
 				setError(true);
-				console.error(err)
+				console.error(err);
 			})
 	}, [loaded, error]);
 
@@ -35,9 +37,9 @@ const App = () => {
 			<Header menu={menu} setMenu={setMenu} />
 			<main>
 				<Routes>
-					<Route path="/" element={<Home countries={countries} loaded={loaded} error={error} />} />
-					<Route path="/:name" element={<Country />} />
 					<Route path="*" element={<NotFound />} />
+					<Route path="/" element={<Home countries={countries} loaded={loaded} error={error} />} />
+					<Route path="/country/:ccn3" element={<Country />} />
 				</Routes>
 			</main>
 			<Footer />
